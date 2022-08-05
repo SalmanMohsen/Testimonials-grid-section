@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body {
+    min-height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent {
+    width: 82%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: 1fr 25px 1fr;
+    /*  grid-template-areas: "one one one one one one one one one one one one one one one one one one one one  two two two two two two two two two  three three three three three three three three three""four four four four four four four four four";*/
+    /* column-gap: 30px;*/
+}
+
+.one {
+    /*grid-area: one;*/
+    position: relative;
+    background-color: hsl(263, 55%, 52%);
+    border-radius: 7px;
+    grid-area: 1/1/span 1/span 20;
+}
+
+.two {
+    /* grid-area: two;*/
+    position: relative;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 7px;
+    grid-area: 1/22/span 1/span 9;
+}
+
+.three {
+    /* grid-area: three;*/
+    position: relative;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 7px;
+    grid-area: 1/32/span 4/span 9;
+}
+
+.four {
+    /* grid-area: four;*/
+    position: relative;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 7px;
+    grid-area: 3/1/span 1/span 9;
+}
+
+.five {
+    /*grid-area: five;*/
+    position: relative;
+    background-color: hsl(219, 29%, 14%);
+    border-radius: 7px;
+    grid-area: 3/11/span 1/span 20;
+}
+
+.dan,
+.jon,
+.kir,
+.jean,
+.pat {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+svg {
+    position: absolute;
+    right: 75px;
+}
+
+.name {
+    width: 100px;
+    position: absolute;
+    top: 30px;
+    left: 75px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.one .name,
+.two .name,
+.five .name {
+    color: white;
+}
+
+span {
+    font-size: 13px;
+    opacity: 50%;
+    font-weight: 500;
+}
+
+.da,
+.jo,
+.ki,
+.je,
+.pa {
+    position: absolute;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    width: 90%;
+    top: 85px;
+    left: 30px;
+}
+
+.pa,
+.da,
+.jo {
+    color: hsl(0, 0%, 100%);
+}
+
+.para {
+    position: absolute;
+    left: 30px;
+    top: 175px;
+    width: 69%;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    opacity: 70%;
+    line-height: 19px;
+}
+
+.one .para,
+.five .para {
+    width: 75%
+}
+
+.one .para,
+.two .para,
+.five .para {
+    color: hsl(210, 46%, 95%)
+}
+
+@media (max-width: 1081px) {
+    body {
+        min-height: 2300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(25, 1fr);
+        min-height: 2120px;
+        width: 90%;
+        row-gap: 30px;
+    }
+    .one {
+        grid-area: 1/1/span 6/span 1;
+    }
+    .two {
+        grid-area: 7/1/span 4/span 1;
+    }
+    .four {
+        grid-area: 11/1/span 4/span 1;
+    }
+    .five {
+        grid-area: 15/1/span 5/span 1;
+    }
+    .three {
+        grid-area: 20/1/span 6/span 1;
+    }
+    .one .para {
+        width: 74%;
+        margin-top: 75px;
+    }
+    .one .da {
+        width: 78%;
+    }
+    .three .para {
+        width: 82%;
+    }
+    .five .para {
+        margin-top: 50px;
+    }
+}
