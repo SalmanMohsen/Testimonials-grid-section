@@ -1,6 +1,2 @@
-function count() {
-    let counter = 0;
-    return function() {
-        return ++counter;
-    };
-}
+let x = 5
+consol.log(x)
