@@ -1,2 +1,4 @@
-let x = 5
-console.log(x)
+function count() {
+    let counter = 0;
+    return counter++;
+}
