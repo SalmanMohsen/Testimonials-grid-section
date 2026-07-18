@@ -1,2 +1,2 @@
-let x = 10
-consol.log(x)
+let x = 9
+console.log(x)
